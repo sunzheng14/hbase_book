@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>fs.hdfs.impl</name>
+        <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
+    </property>
+    <property>
+        <!-- 客户端缓冲区大小 -->
+        <name>hbase.client.write.buffer</name>
+        <value>2097152</value>
+    </property>
+</configuration>
