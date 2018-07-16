@@ -1,0 +1,17 @@
+.settings
+.project
+/bin
+.settings
+.classpath
+target
+build
+
+.idea
+*.iml
+*.class
+
+.DS_Store
+sla-log
+log
+cat
+logs
