@@ -21,8 +21,6 @@ public class DeleteExample {
         Delete del2 = new Delete(Bytes.toBytes("row1"));
         del2.deleteFamily(Bytes.toBytes("fam1"),2);
 
-
-
         table.delete(del2);
         table.close();
 
