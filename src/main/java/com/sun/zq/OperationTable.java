@@ -7,6 +7,7 @@ import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
+import org.apache.hadoop.hbase.util.Bytes;
 
 public class OperationTable {
 	static Configuration cfg = HBaseConfiguration.create();
@@ -26,6 +27,28 @@ public class OperationTable {
 			
 			System.out.println("create table success");
 		}
+	}
+
+	public static void tableTest() throws IOException {
+		HBaseAdmin admin = new HBaseAdmin(cfg);
+//		admin.getMasterCoprocessors();
+//		admin.isMasterRunning();
+//		admin.getConnection();
+//		admin.getConfiguration();
+//		admin.close();
+
+
+
+		TableName tableName = TableName.valueOf("sz");
+		HTableDescriptor hd = new HTableDescriptor(tableName);
+		HColumnDescriptor cf = new HColumnDescriptor(Bytes.toBytes("cf2"));
+		cf.getName();
+		cf.getNameAsString();
+		cf.getMaxVersions();
+		hd.addFamily(cf);
+
+
+		admin.createTable(hd);
 	}
 	
 	
