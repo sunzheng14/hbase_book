@@ -22,7 +22,7 @@ public class PutExample {
 
 		table.setAutoFlushTo(false);//启用客户端写缓存
 		// 指定一行来创建一个put
-		Put put = new Put(Bytes.toBytes("row1"));
+		Put put = new Put(Bytes.toBytes("row3"));
 		put.add(Bytes.toBytes("fam1"), Bytes.toBytes("qual3"), Bytes.toBytes("val3"));
 		put.add(Bytes.toBytes("fam1"), Bytes.toBytes("qual4"), Bytes.toBytes("val4"));
 		put.add(Bytes.toBytes("fam1"), Bytes.toBytes("qual5"), Bytes.toBytes("val5"));
